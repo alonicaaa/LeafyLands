@@ -30,14 +30,16 @@ body {
     align-items: center;
     font-size: 24px;
     color: #EE6983;
-    order: 2; /* Menempatkan logo di sebelah kanan */
+    order: 2;
+    /* Menempatkan logo di sebelah kanan */
 }
 
 .navbar-logo {
     width: 60px;
     height: 60px;
     max-width: 90px;
-    margin-left: 10px; /* Posisikan logo lebih rapat ke teks */
+    margin-left: 10px;
+    /* Posisikan logo lebih rapat ke teks */
 }
 
 .navbar .highlight {
@@ -50,7 +52,8 @@ body {
     display: flex;
     gap: 10px;
     padding: 10px;
-    order: 1; /* Menempatkan menu di sebelah kiri */
+    order: 1;
+    /* Menempatkan menu di sebelah kiri */
 }
 
 .menu li a {
@@ -69,11 +72,45 @@ body {
 }
 
 /* Hamburger menu styling */
+/* Tombol hamburger (default tersembunyi) */
 .hamburger {
     display: none;
-    cursor: pointer;
+    /* Default: tidak tampil */
     flex-direction: column;
     gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    /* Menempatkan hamburger di kiri */
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #EE6983;
+    transition: all 0.3s ease;
+}
+
+/* Ubah tombol hamburger menjadi X */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
 }
 
 .hamburger div {
@@ -122,10 +159,7 @@ body {
         font-size: 18px;
     }
 }
-
-
-
-
+/* End Navbar */
 
 /* Hero Section */
 .hero {
