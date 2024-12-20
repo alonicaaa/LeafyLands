@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeafyLands</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- font awesome style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tambahkan dibagian head -->
+    <link href="styles/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Menyambungkan ke file script.js -->
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    <!-- Start: Navbar -->
+    <nav class="navbar">
+        <h1>
+            <img src="assets/Logo.png" alt="Logo" class="navbar-logo" />
+            Leafy <span class="highlight">Lands</span>
+        </h1>
+        <div class="container">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="jenis.html">Jenis Bunga</a></li>
+                <li><a href="pelestarian.html">Pelestarian</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>   
+            </ul>    
+        </div>
+    </nav>
+    <!-- End: Navbar -->
+
+    <!-- Bagian Hero -->
+    <section class="hero-galery" id="galeri">
+        <div class="container">
+            <div class="hero-content">
+                    <h2>Keindahan Bunga dalam Satu Galeri</span></h2>
+                    <p>Temukan pesona dunia bunga dalam koleksi visual yang memukau.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End: Bagian Hero -->
+    
+    <!-- Bagian Galeri -->
+    <section class="gallery">
+        <div class="gallery-item"><img src="assets/lily.jpg" alt="Bunga 1"></div>
+        <div class="gallery-item"><img src="assets/lotus.jpg" alt="Bunga 2"></div>
+        <div class="gallery-item"><img src="assets/melati.jpg" alt="Bunga 3"></div>
+        <div class="gallery-item"><img src="assets/roses.jpg" alt="Bunga 4"></div>
+        <div class="gallery-item"><img src="assets/orchid.jpg" alt="Bunga 5"></div>
+        <div class="gallery-item"><img src="assets/cempaka.jpg" alt="Bunga 6"></div>
+        <div class="gallery-item"><img src="assets/cengkeh.jpg" alt="Bunga 7"></div>
+        <div class="gallery-item"><img src="assets/dahlia.jpg" alt="Bunga 8"></div>
+        <div class="gallery-item"><img src="assets/Edelweis.jpg" alt="Bunga 9"></div>
+        <div class="gallery-item"><img src="assets/raflesia. Largest Flower in the World's…" alt="Bunga 10"></div>
+        <div class="gallery-item"><img src="assets/kamboja.jpg" alt="Bunga 11"></div>
+        <div class="gallery-item"><img src="assets/kenanga.jpg" alt="Bunga 12"></div>
+        <div class="gallery-item"><img src="assets/kembang turi.jpg" alt="Bunga 13"></div>
+        <div class="gallery-item"><img src="assets/lavender.jpg" alt="Bunga 14"></div>
+        <div class="gallery-item"><img src="assets/bunga pepaya.jpg" alt="Bunga 15"></div>
+        <div class="gallery-item"><img src="assets/terung.jpg" alt="Bunga 16"></div>
+        <div class="gallery-item"><img src="assets/temulawak.jpg" alt="Bunga 17"></div>
+    </section>  
+
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+    
+        const handleScroll = () => {
+            galleryItems.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    item.classList.add('visible');
+                }
+            });
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check in case items are already in view
+</script>  
+    <!-- footer section-->
+    <footer class="footer">
+        <div class="contact-info">
+        <h3>Kontak Kami</h3>
+        <p><i class="fa-solid fa-phone"></i> Telepon: +62 812 3456 7890</p>
+        <p><i class="fa-solid fa-envelope"></i> Email: LeafyLands@gmail.com</p>
+        <h3>Ikuti Kami</h3>
+            <div class="social-media">
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/?lang=en-id"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <p class="copyright">&copy; 2024 LeafyLands. Hak Cipta Dilindungi</p>
+    <!--end footer section -->
+</body>
+</html>
+
+    <!-- Menyambungkan ke file script.js -->
+    <script src="script.js"></script>
